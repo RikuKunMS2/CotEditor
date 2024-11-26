@@ -90,6 +90,9 @@
         }
       }
     },
+    "%@ pixels/inch" : {
+
+    },
     "%@:" : {
       "comment" : "format for control labels followed by a colon",
       "localizations" : {
@@ -175,6 +178,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@："
+          }
+        }
+      }
+    },
+    "%lld × %lld pixels" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld × %2$lld pixels"
           }
         }
       }
@@ -266,6 +279,18 @@
           }
         }
       }
+    },
+    "Close split editor" : {
+
+    },
+    "Close Split Editor" : {
+
+    },
+    "Color model" : {
+
+    },
+    "ColorSync profile" : {
+
     },
     "copy" : {
       "comment" : "suffix for copied setting file",
@@ -2341,6 +2366,15 @@
           }
         }
       }
+    },
+    "Extracting Outline…" : {
+
+    },
+    "Image DPI" : {
+
+    },
+    "Image size" : {
+
     },
     "Import" : {
       "comment" : "button label",
@@ -4425,6 +4459,12 @@
         }
       }
     },
+    "Jump to next outline item" : {
+
+    },
+    "Jump to previous outline item" : {
+
+    },
     "Last modified on %@" : {
       "comment" : "print header/footer (%@ is date)",
       "localizations" : {
@@ -4799,6 +4839,12 @@
           }
         }
       }
+    },
+    "Navigation Bar" : {
+
+    },
+    "Next Outline Item" : {
+
     },
     "NSColorSpace.Model.cmyk" : {
       "extractionState" : "extracted_with_value",
@@ -5555,6 +5601,18 @@
           }
         }
       }
+    },
+    "Open as Plain Text" : {
+
+    },
+    "Open with External Editor" : {
+
+    },
+    "Outline Menu" : {
+
+    },
+    "Previous Outline Item" : {
+
     },
     "Printed on %@" : {
       "comment" : "print header/footer (%@ is date)",
@@ -7051,6 +7109,21 @@
           }
         }
       }
+    },
+    "Show in Finder" : {
+
+    },
+    "Split editor" : {
+
+    },
+    "Split Editor" : {
+
+    },
+    "Stack Editors Horizontally" : {
+
+    },
+    "Stack Editors Vertically" : {
+
     },
     "SyntaxName.none" : {
       "extractionState" : "extracted_with_value",

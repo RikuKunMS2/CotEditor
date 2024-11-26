@@ -580,27 +580,9 @@ extension Document: EditorSource {
     
     override func canClose(withDelegate delegate: Any, shouldClose shouldCloseSelector: Selector?, contextInfo: UnsafeMutableRawPointer?) {
         
-        // suppress save dialog if contents are empty and not saved explicitly
-        suppression: if self.isDraft || self.fileURL == nil, self.textStorage.string.isEmpty {
-            // delete autosaved file if exists
-            // -> An engineer at Apple told there is no need to wrap the file access here with NSFileCoordinator (2023-06).
-            if let fileURL = self.fileURL {
-                do {
-                    try FileManager.default.removeItem(at: fileURL)  // FILE_ACCESS
-                } catch {
-                    Logger.app.error("Failed empty file deletion: \(error)")
-                    break suppression
-                }
-            }
-            
-            // tell the document can be closed; then, no need to invoke super anymore
-            DelegateContext(delegate: delegate, selector: shouldCloseSelector, contextInfo: contextInfo).perform(from: self, flag: true)
-            return
-        }
-        
-        super.canClose(withDelegate: delegate, shouldClose: shouldCloseSelector, contextInfo: contextInfo)
+        // Always allow closing without prompting the user
+        DelegateContext(delegate: delegate, selector: shouldCloseSelector, contextInfo: contextInfo).perform(from: self, flag: true)
     }
-    
     
     override func close() {
         

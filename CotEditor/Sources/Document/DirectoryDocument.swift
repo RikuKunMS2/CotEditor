@@ -152,20 +152,12 @@ final class DirectoryDocument: NSDocument {
     override func shouldCloseWindowController(_ windowController: NSWindowController, delegate: Any?, shouldClose shouldCloseSelector: Selector?, contextInfo: UnsafeMutableRawPointer?) {
         
         Task {
-            // save unsaved changes in the file documents before closing
-            var canClose = true
-            for document in self.documents where document.isDocumentEdited {
-                // ask to the user one-by-one
-                guard await document.canClose() else {
-                    canClose = false
-                    break
-                }
-            }
+            // directly allow closing without saving changes
+            let canClose = true
             
             DelegateContext(delegate: delegate, selector: shouldCloseSelector, contextInfo: contextInfo).perform(from: self, flag: canClose)
         }
     }
-    
     
     override func close() {
         

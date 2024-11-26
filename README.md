@@ -1,3 +1,6 @@
+# What this particular fork does
+It makes it so cot editor stops asking you to save untitled files and just quits.
+
 # CotEditor
 
 CotEditor is a lightweight plain-text editor for macOS. The project aims to provide a general plain-text editor for everyone with an intuitive macOS-native user interface.

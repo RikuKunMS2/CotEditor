@@ -85,27 +85,13 @@ extension NSDocument {
 
 extension NSDocument {
     
-    /// Asks the user for the handling unsaved changes and waits for the answer.
+    /// Skips asking the user for the handling unsaved changes and always returns `true`.
     ///
-    /// - Returns: Returns `false` when the user cancels the operation, otherwise `true`.
+    /// - Returns: Always returns `true`.
     final func canClose() async -> Bool {
-        
-        await withCheckedContinuation { continuation in
-            self.canClose(withDelegate: self,
-                          shouldClose: #selector(self.document(_:shouldClose:contextInfo:)),
-                          contextInfo: bridgeWrapped(continuation))
-        }
-    }
-    
-    
-    @objc private final func document(_ document: NSDocument, shouldClose: Bool, contextInfo: UnsafeRawPointer) {
-        
-        let continuation: CheckedContinuation<Bool, Never> = bridgeUnwrapped(contextInfo)
-        
-        continuation.resume(returning: shouldClose)
+        return true
     }
 }
-
 
 // MARK: Error Handling
 

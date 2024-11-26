@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@ pixels/inch" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -90,6 +91,7 @@
       }
     },
     "%lld × %lld pixels" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -623,6 +625,7 @@
     },
     "Close split editor" : {
       "comment" : "tooltip for button",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -712,6 +715,7 @@
     },
     "Close Split Editor" : {
       "comment" : "accessibility label for button",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -889,6 +893,7 @@
       }
     },
     "Color model" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -977,6 +982,7 @@
       }
     },
     "ColorSync profile" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -1955,6 +1961,7 @@
       }
     },
     "Extracting Outline…" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -3525,6 +3532,7 @@
       }
     },
     "Image DPI" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -3613,6 +3621,7 @@
       }
     },
     "Image size" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -3969,6 +3978,7 @@
     },
     "Jump to next outline item" : {
       "comment" : "tooltip for button",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -4058,6 +4068,7 @@
     },
     "Jump to previous outline item" : {
       "comment" : "tooltip for button",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -5215,6 +5226,7 @@
     },
     "Navigation Bar" : {
       "comment" : "accessibility label",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -5482,6 +5494,7 @@
     },
     "Next Outline Item" : {
       "comment" : "accessibility label for button",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -5924,6 +5937,7 @@
       }
     },
     "Open as Plain Text" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -6280,6 +6294,7 @@
     },
     "Outline Menu" : {
       "comment" : "accessibility label",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -6547,6 +6562,7 @@
     },
     "Previous Outline Item" : {
       "comment" : "accessibility label for button",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -7258,6 +7274,7 @@
     },
     "Split editor" : {
       "comment" : "tooltip for button",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -7347,6 +7364,7 @@
     },
     "Split Editor" : {
       "comment" : "accessibility label for button",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
