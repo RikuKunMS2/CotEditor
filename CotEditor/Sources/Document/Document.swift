@@ -36,6 +36,7 @@ import FilePermissions
 import LineEnding
 import Syntax
 import URLUtils
+import Cocoa
 
 extension Document: EditorSource {
     
@@ -584,7 +585,33 @@ extension Document: EditorSource {
         DelegateContext(delegate: delegate, selector: shouldCloseSelector, contextInfo: contextInfo).perform(from: self, flag: true)
     }
     
+    func countVisibleWindowGroupsInOwnApp() -> Int {
+        var visibleWindowGroupCount = 0
+        let windows = NSApplication.shared.windows
+
+        for window in windows {
+            // Identify main windows (exclude tab windows or child windows within a tab group)
+            if window.isVisible &&
+               !window.isMiniaturized &&
+               window.parent == nil &&
+               window.tabbedWindows?.isEmpty ?? true {  // Check for tabbed windows
+                visibleWindowGroupCount += 1
+            }
+        }
+
+        return visibleWindowGroupCount
+    }
+
     override func close() {
+        
+        let groupCount = countVisibleWindowGroupsInOwnApp()
+        
+        Logger.app.debug("Number of window groups: \(groupCount)")
+
+        if groupCount == 0 {
+            Logger.app.debug("Closing the last window group")
+            exit(0)
+        }
         
         super.close()
         
