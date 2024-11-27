@@ -3,7 +3,7 @@ It makes it so cot editor stops asking you to save untitled files and just quits
 
 I setup better touch tool to do this:
 
-Set up Leftclick Red Window Button trigger with an advanced condition `focused_element_details BEGINSWITH "<AXApplication: \"CotEditor\">"
+Set up Leftclick Red Window Button trigger with an advanced condition `focused_element_details BEGINSWITH "<AXApplication: \"CotEditor\">" AND (NOT (focused_element_details CONTAINS " <AXWindow: \"Find & Replace\">"))
 `
 then have it run a shell script:
 
