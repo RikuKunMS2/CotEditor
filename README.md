@@ -1,5 +1,27 @@
 # What this particular fork does
-It makes it so cot editor stops asking you to save untitled files and just quits.
+It makes it so cot editor stops asking you to save untitled files and just quits. Unfortunately it quits on tab close on the final window, didn't figure out how to fix that yet, so instead I'm using better touch tool to handle the hot closing:
+
+I setup better touch tool to do this:
+
+Set up Leftclick Red Window Button trigger with an advanced condition `focused_element_details BEGINSWITH "<AXApplication: \"CotEditor\">"
+`
+then have it run a shell script:
+
+
+```
+window_count=$(osascript -e 'tell application "System Events" to count (every window of application process "CotEditor")')
+
+if [[ "$window_count" -eq "1" ]]; then
+  # Close the active window (more robust than quitting the app if only one window exists)
+  osascript -e 'quit application "CotEditor"'
+  echo "Active CotEditor quit."
+elif [[ "$window_count" -gt "0" ]]; then
+  echo "Multiple CotEditor windows are open ($window_count).  Closing now"
+  osascript -e 'tell application "CotEditor" to close (window 1)'
+else
+  echo "No CotEditor windows are open."
+fi
+```
 
 # CotEditor
 
